@@ -1,4 +1,14 @@
- # cdk-lambda-layer-builder
+# cdk-lambda-layer-builder
+
+## DISCLAIMER
+
+This repo is forked from [aws-samples/aws-cdk-lambda-layer-builder](https://github.com/aws-samples/aws-cdk-lambda-layer-builder) in order to add more Python versions support to this useful but seems been abandoned project. I didn't test it precisely but just make it able to work.
+
+Feel free to fork it but 🚨 USE AT YOUR OWN RISK! 🚨 And please understand that I may not be able to support this project long-term, so I won't accept any issue/bug report. 🙇🏻
+
+## Original Project Introduction 
+
+| [NOTE] I modified the repo's path
 
 cdk-lambda-layer-builder is a collection of [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html#cpm) 
 constructs to build Python Lambda Layers with minimum requirements on the user 
@@ -23,7 +33,7 @@ This construct works on Linux & MacOS and should work on Windows.
 You need to install `cdk-lambda-layer-builder` in the python environment you intend 
 to use to build your stack. You can install the module directly from github with
 ```bash
-$ python -m pip install git+https://github.com/aws-samples/aws-cdk-lambda-layer-builder.git
+$ python -m pip install git+https://github.com/Vivicorp-AWS/aws-cdk-lambda-layer-builder.git
 ```
 Or you can clone the repository first, then in the folder of this `README.md`, install 
 the module with
