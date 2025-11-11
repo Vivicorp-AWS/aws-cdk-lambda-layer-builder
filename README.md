@@ -4,7 +4,9 @@
 
 This repo is forked from [aws-samples/aws-cdk-lambda-layer-builder](https://github.com/aws-samples/aws-cdk-lambda-layer-builder) in order to add more Python versions support to this useful but seems been abandoned project. I didn't test it precisely but just make it able to work.
 
-Feel free to fork it but 🚨 USE AT YOUR OWN RISK! 🚨 And please understand that I may not be able to support this project long-term, so I won't accept any issue/bug report. 🙇🏻
+The changes made after the fork is only adding more Python versions to match the [supported runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtimes-supported) at this time (2025-11-11), and removes the unsupported ones.
+
+Feel free to use or fork this project, but please 🚨 **USE AT YOUR OWN RISK!** 🚨 And please understand that I may not be able to support this project long-term, so I won't accept any issue/bug report. 🙇🏻
 
 ## Original Project Introduction 
 
@@ -23,7 +25,7 @@ or can be custom modules.
 
 ## Requirements
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) >= v2: installed and configured
-* [Python](https://www.python.org/) >= 3.6
+* [Python](https://www.python.org/) >= 3.9
 * [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html#cpm) >= 2.X
 * [Docker](https://docs.docker.com/get-docker/)
 
