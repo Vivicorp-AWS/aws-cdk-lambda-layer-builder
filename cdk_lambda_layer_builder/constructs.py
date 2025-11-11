@@ -203,15 +203,19 @@ class BuildPyLayerAsset(Construct):
         Lambda layer.
         '''
         image_name: str = ''
-        if self.py_runtime.to_string()=='python3.7':
-            image_name = 'python:3.7.13'
-        elif self.py_runtime.to_string()=='python3.8':
-            image_name = 'python:3.8.13'
-        elif self.py_runtime.to_string()=='python3.9':
-            image_name = 'python:3.9.13'
+        if self.py_runtime.to_string()=='python3.9':
+            image_name = 'python:3.9.25'
+        elif self.py_runtime.to_string()=='python3.10':
+            image_name = 'python:3.10.19'
+        elif self.py_runtime.to_string()=='python3.11':
+            image_name = 'python:3.11.14'
+        elif self.py_runtime.to_string()=='python3.12':
+            image_name = 'python:3.12.12'
+        elif self.py_runtime.to_string()=='python3.13':
+            image_name = 'python:3.13.9'
         else:
             raise ValueError(
-                (f'py_runtime must be aws_lambda.Runtime.[PYTHON_3_7 | PYTHON_3_8 | PYTHON_3_9]. '
+                (f'py_runtime must be aws_lambda.Runtime.[PYTHON_3_9 | PYTHON_3_10 | PYTHON_3_11 | PYTHON_3_12 | PYTHON_3_13]. '
                  f'{self.py_runtime.to_string()} passed')
             )
         return image_name
@@ -219,19 +223,23 @@ class BuildPyLayerAsset(Construct):
 
     def get_pyversion(self) -> str:
         '''
-        Returns the python version name (e.g. 3.8) from the python runtime used for the
+        Returns the python version name (e.g. 3.9) from the python runtime used for the
         Lambda layer.
         '''
         pyver_name: str = ''
-        if self.py_runtime.to_string()=='python3.7':
-            pyver_name = '3.7'
-        elif self.py_runtime.to_string()=='python3.8':
-            pyver_name = '3.8'
-        elif self.py_runtime.to_string()=='python3.9':
+        if self.py_runtime.to_string()=='python3.9':
             pyver_name = '3.9'
+        elif self.py_runtime.to_string()=='python3.10':
+            pyver_name = '3.10'
+        elif self.py_runtime.to_string()=='python3.11':
+            pyver_name = '3.11'
+        elif self.py_runtime.to_string()=='python3.12':
+            pyver_name = '3.12'
+        elif self.py_runtime.to_string()=='python3.13':
+            pyver_name = '3.13'
         else:
             raise ValueError(
-                (f'py_runtime must be aws_lambda.Runtime.[PYTHON_3_7 | PYTHON_3_8 | PYTHON_3_9]. '
+                (f'py_runtime must be aws_lambda.Runtime.[PYTHON_3_9 | PYTHON_3_10 | PYTHON_3_11 | PYTHON_3_12 | PYTHON_3_13]. '
                  f'{self.py_runtime.to_string()} passed')
             )
         return pyver_name
